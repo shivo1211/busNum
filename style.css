@@ -15,12 +15,14 @@ body {
     /* Center content vertically */
     height: 100vh;
     /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
 }
 
 /* Container */
 .container {
-    width: 100%;
-    /* Use full width */
+    width: 90%;
+    /* Initial width relative to viewport width */
     max-width: 600px;
     /* Maximum width for the container */
     padding: 20px;
@@ -30,6 +32,12 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
     /* Center-align text */
+    display: flex;
+    /* Use flexbox for alignment */
+    flex-direction: column;
+    /* Arrange children vertically */
+    justify-content: center;
+    /* Center children vertically */
 }
 
 /* Headings */
@@ -43,11 +51,12 @@ h2 {
 
 /* Inputs */
 .input-group input {
-    width: 100%;
+    width: 15%;
     /* Full width of the container */
     padding: 10px;
     border-radius: 8px;
     border: 1px solid #ddd;
+    text-align: center;
     font-size: 16px;
     color: #4b2e83;
     /* Dark purple text color */
@@ -78,7 +87,7 @@ h2 {
 
 /* Output */
 .output {
-    width: 100%;
+    width: 95%;
     /* Full width of the container */
     padding: 10px;
     margin-top: 20px;
@@ -112,4 +121,28 @@ h2 {
 .container::after {
     bottom: -50px;
     right: -50px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+
+    /* Reduce padding in smaller screens */
+    .container {
+        padding: 15px;
+    }
+
+    /* Reduce padding in inputs and buttons */
+    input,
+    .button,
+    .output {
+        padding: 8px;
+    }
+
+    /* Adjust the border-radius for smaller screens */
+    .container,
+    input,
+    .button,
+    .output {
+        border-radius: 6px;
+    }
 }
