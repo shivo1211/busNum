@@ -7,26 +7,22 @@ body {
     padding: 0;
     color: #4b2e83;
     /* Dark purple text color */
-    height: 80vh;
-    /* 80% of viewport height */
-    width: 80vw;
-    /* 80% of viewport width */
     display: flex;
+    /* Use flexbox layout */
     justify-content: center;
-    /* Center the content horizontally */
+    /* Center content horizontally */
     align-items: center;
-    /* Center the content vertically */
-    margin: auto;
-    /* Center the body within the viewport */
-    border-radius: 12px;
-    /* Optional: Add rounded corners */
+    /* Center content vertically */
+    height: 100vh;
+    /* Full viewport height */
 }
 
 /* Container */
 .container {
+    width: 100%;
+    /* Use full width */
     max-width: 600px;
-    width: 90%;
-    /* Reduce container width for better responsiveness */
+    /* Maximum width for the container */
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     /* Transparent white background */
@@ -34,7 +30,6 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     text-align: center;
     /* Center-align text */
-    margin: auto;
 }
 
 /* Headings */
@@ -46,13 +41,8 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* Input Group */
-.input-group {
-    margin-bottom: 15px;
-}
-
 /* Inputs */
-input {
+.input-group input {
     width: 100%;
     /* Full width of the container */
     padding: 10px;
@@ -61,8 +51,8 @@ input {
     font-size: 16px;
     color: #4b2e83;
     /* Dark purple text color */
-    outline: none;
-    /* Remove focus outline */
+    margin-bottom: 15px;
+    /* Add space below the input */
 }
 
 /* Button */
@@ -77,7 +67,7 @@ input {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-top: 10px;
     /* Add space above the button */
 }
 
