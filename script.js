@@ -34,7 +34,11 @@ function handleSubmit(event) {
 
     // Display the equalized array in the output div
     const outputDiv = document.getElementById('output');
-    outputDiv.innerHTML = 'Array after equalization:<br>' + arr.map(value => value.toFixed(4)).join(', ');
+    outputDiv.innerHTML = 'Array after equalization:<br>' + arr.map(value => {
+        const valueStr = value.toString();
+        // Return the value string without trailing zeros if it has a decimal point
+        return valueStr.includes('.') ? valueStr.replace(/0+$/, '').replace(/\.$/, '') : valueStr;
+    }).join(', ');
 }
 
 // Add an event listener to the form submit event
