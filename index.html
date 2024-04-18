@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Array Equalizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Bus Number Equalizer</h2>
+        <form id="floatForm">
+            <div class="input-group">
+                <label for="num1">Enter Digit 1: &emsp; </label>
+                <input type="number" id="num1" step="1" required>
+                <!-- change step value to take integer value. e.g from "1" to "0.0001" -->
+            </div>
+            <div class="input-group">
+                <label for="num2">Enter Digit 2: &emsp;</label>
+                <input type="number" id="num2" step="1" required>
+            </div>
+            <div class="input-group">
+                <label for="num3">Enter Digit 3: &emsp; </label>
+                <input type="number" id="num3" step="1" required>
+            </div>
+            <div class="input-group">
+                <label for="num4">Enter Digit 4: &emsp;</label>
+                <input type="number" id="num4" step="1" required>
+            </div>
+            <button type="submit" class="button">Equalize</button>
+        </form>
+
+        <div id="output" class="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
